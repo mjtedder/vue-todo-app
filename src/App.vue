@@ -1,18 +1,17 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Hello Vue" num="1" />
-    {{todos.map(todo => todo.id)}}
+    <Todos v-bind:todos="todos"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Todos from "./components/Todos"
 
 export default {
   name: "app",
   components: {
-    HelloWorld
+    Todos
   },
   data() {
     return {
