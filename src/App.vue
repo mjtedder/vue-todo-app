@@ -1,18 +1,19 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <h1>Vue.js Todo App</h1>
+    <Header />
     <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo"/>
   </div>
 </template>
 
 <script>
-import Todos from "./components/Todos"
+import Todos from "./components/Todos.vue"
+import Header from "./components/layouts/Header.vue"
 
 export default {
   name: "app",
   components: {
-    Todos
+    Todos,
+    Header
   },
   data() {
     return {
